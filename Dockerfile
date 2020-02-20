@@ -11,4 +11,4 @@ RUN apk add --no-cache python3 py3-pip && \
     pip3 install catt && \
     pip3 install paho-mqtt
 
-ENTRYPOINT ["python3", "server.py"]
+CMD ["python3", "server.py"]

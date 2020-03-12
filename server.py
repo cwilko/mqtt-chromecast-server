@@ -30,7 +30,7 @@ def on_message(client, userdata, msg):
 		subprocess.run(["catt", "stop"])
 	elif (msg.topic.endswith("start")):
 		print("Casting to device...")
-		subprocess.run(["catt", "cast_site", msg_received])
+		subprocess.run(["catt", "-d", CAST_DEVICE, "cast_site", msg_received])
     	
 
 client = mqtt.Client()
